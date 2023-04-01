@@ -13,7 +13,6 @@ export const getUsers = async (req: Express.Request, res: Express.Response) => {
 
 export const getUser = async (req: Express.Request, res: Express.Response) => {
     try {
-        console.log('on branch master')
         console.log('on branch sample1')
         const user = await User.findById(req.params.id)
         res.status(200).json(user)
