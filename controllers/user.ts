@@ -130,7 +130,7 @@ export const addUser = async (req: Express.Request, res: Express.Response) => {
 export const getUsers = async (req: Express.Request, res: Express.Response) => {
     try {
         const users = await User.find()
-        res.status(200).json({ users: users })
+        res.status(200).json(users)
     } catch (error) {
         res.status(404).json(error)
     }

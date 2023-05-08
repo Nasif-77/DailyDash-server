@@ -13,7 +13,7 @@ export const authenticateToken = async (req: customRequest, res: Response, next:
     const jwtKey: any = process.env.SECRET_JWT_KEY
 
     jwt.verify(token, jwtKey, (err: any, user: any) => {
-        if (err) return res.status(403)
+        if (err) return res.status(401).json({ message: "Unauthorized" })
 
         req.user = user
         next()

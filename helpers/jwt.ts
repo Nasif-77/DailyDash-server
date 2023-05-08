@@ -1,5 +1,5 @@
-// import { NextFunction } from 'express'
-// import jwt from 'jsonwebtoken'
+import { NextFunction } from 'express'
+import jwt from 'jsonwebtoken'
 
 
 
@@ -12,12 +12,14 @@
 //         audience: user.id
 //     }
 //     console.log('token')
-    
+
 //     const token = jwt.sign(payload, secret, options)
 
 // }
 
+const verification = jwt.verify('eyJhbGciOiJIUzI1NiJ9.eyJfaWQiOiI2NDU2MDI5M2YwNDdlMTM2NDEwZDA3OTMiLCJuYW1lIjoiTmFzaWYiLCJlbWFpbCI6Im5hc2lmcGU3N0BnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYiQxMCRDTXlIa3NMWWp4bW1ua2FJVC9wM2d1aWsxSk9tZXJFT3BGemhVd3M4UzBqVFNpNEdhbFB3UyIsImNvbnRhY3QiOjk4MDk3OTIwNzUsImNyZWF0ZWRBdCI6IjIwMjMtMDUtMDZUMDc6MzI6MzUuMzQ2WiIsIl9fdiI6MH0.0K9TR0RH7edOapIP2IRkgsxhmbVEB3QUw4IFswleMd0', '')
 
+console.log(verification)
 
 
 // export const verifyAcessToken = (req: Request, res: Response, next: NextFunction) => {
