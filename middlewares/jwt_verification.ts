@@ -14,7 +14,6 @@ export const authenticateToken = async (req: customRequest, res: Response, next:
 
     jwt.verify(token, jwtKey, (err: any, user: any) => {
         if (err) return res.status(401).json({ message: "Unauthorized" })
-
         req.user = user
         next()
     })
