@@ -10,7 +10,11 @@ export const authenticateToken = async (req: customRequest, res: Response, next:
     const token: any = authHeader && authHeader.split(' ')[1]
     if (token === null) return res.status(401);
 
-    const jwtKey: any = process.env.SECRET_JWT_KEY
+    console.log(token)
+
+    
+
+    const jwtKey: any = process.env.SECRET_GOOGLE_JWT_KEY
 
     jwt.verify(token, jwtKey, (err: any, user: any) => {
         if (err) return res.status(401).json({ message: "Unauthorized" })

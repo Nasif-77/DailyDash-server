@@ -13,6 +13,7 @@
     "@types/mongoose": "^5.11.97",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
+    "google-auth-library": "^8.8.0",
     "http-errors": "^2.0.0",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.3",
